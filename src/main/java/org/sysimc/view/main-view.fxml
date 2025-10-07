@@ -16,8 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sysimc.controller.MainController">
    <children>
       <MenuBar>
         <menus>
@@ -53,9 +52,9 @@
                         <Label text="Nome:" />
                         <Label text="Altura:" GridPane.rowIndex="2" />
                         <Label text="Peso:" GridPane.rowIndex="4" />
-                        <TextField promptText="Nome" GridPane.rowIndex="1" />
-                        <TextField promptText="Altura" GridPane.rowIndex="3" />
-                        <TextField promptText="Peso" GridPane.rowIndex="5" />
+                        <TextField fx:id="txtNome" promptText="Nome" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtAltura" promptText="Altura" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtPeso" promptText="Peso" GridPane.rowIndex="5" />
                      </children>
                      <VBox.margin>
                         <Insets left="22.0" right="22.0" top="10.0" />
@@ -63,7 +62,7 @@
                   </GridPane>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="100.0" text="Calcular IMC">
+                        <Button mnemonicParsing="false" onAction="#onCalcularIMCClick" prefWidth="100.0" text="Calcular IMC">
                            <HBox.margin>
                               <Insets left="5.0" />
                            </HBox.margin>
@@ -89,7 +88,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label text="00.00">
+                  <Label fx:id="lbIMC" text="00.00">
                      <VBox.margin>
                         <Insets bottom="20.0" top="20.0" />
                      </VBox.margin>
@@ -97,7 +96,7 @@
                         <Font size="70.0" />
                      </font>
                   </Label>
-                  <Label contentDisplay="CENTER" />
+                  <Label fx:id="lbClassificacao" contentDisplay="CENTER" />
                </children>
             </VBox>
          </children>
