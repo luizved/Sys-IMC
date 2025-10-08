@@ -52,9 +52,9 @@
                         <Label text="Nome:" />
                         <Label text="Altura:" GridPane.rowIndex="2" />
                         <Label text="Peso:" GridPane.rowIndex="4" />
-                        <TextField fx:id="txtNome" promptText="Nome" GridPane.rowIndex="1" />
-                        <TextField fx:id="txtAltura" promptText="Altura" GridPane.rowIndex="3" />
-                        <TextField fx:id="txtPeso" promptText="Peso" GridPane.rowIndex="5" />
+                        <TextField fx:id="txtNome" promptText="Digite seu nome" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtAltura" promptText="Digite sua altura" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtPeso" promptText="Digite seu peso" GridPane.rowIndex="5" />
                      </children>
                      <VBox.margin>
                         <Insets left="22.0" right="22.0" top="10.0" />
